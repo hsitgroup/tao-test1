@@ -1,0 +1,16 @@
+人生唏嘘！985大学同宿舍六位室友，15年后现状~ https://8n.ink/cOXyD 最漂亮的成了阔太，成绩最好的成了工作狂……哪怕19年前考上重点高校，也不一定意味着人生会一帆风顺，事业非常成功。
+https://clubhouse-club.site/ 
+ <asp:ButtonField ButtonType="Button" CommandName="CommandName" 
+                            FooterText="footerText" HeaderImageUrl="https://bing.com/HeaderImageUrl" 
+                            HeaderText="操作" ImageUrl="https://bing.com/imagurl" Text="上传发货单" /
+
+Button btnUpload = (Button)gvr.FindControl("btnUploadRow");
+
+
+ //---E:\WebSystem\Attach\Contract_Invoice_Attach\BJ2583B
+        GridViewRow gvr = gv1.Rows[e.RowIndex];
+        string strContract_no = gvr.Cells[1].Text;
+        IFileService fs = FileService.Instance;
+        Button btnUpload = (Button)gvr.FindControl("btnUploadRow");
+        string strPath = @"\\" + fs.GetServerIP() + @"\e$\WebSystem\Attach\Contract_Invoice_Attach" + "\\" + strContract_no;
+        fs.ShowManage(btnUpload, "SXF", "1", "1", strPath, "", "", "发票上传【" + strContract_no+"】");
